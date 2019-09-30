@@ -10,7 +10,6 @@
 		454CA1132341513D00015660 /* OrderForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454CA10B2341513D00015660 /* OrderForm.swift */; };
 		454CA1142341513D00015660 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454CA10C2341513D00015660 /* DetailView.swift */; };
 		454CA1152341513D00015660 /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454CA10D2341513D00015660 /* FoodData.swift */; };
-		454CA1162341513D00015660 /* ContentViewTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454CA10E2341513D00015660 /* ContentViewTemp.swift */; };
 		454CA1172341513D00015660 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454CA10F2341513D00015660 /* Food.swift */; };
 		454CA1182341513D00015660 /* DetailRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454CA1102341513D00015660 /* DetailRow.swift */; };
 		454CA1192341513D00015660 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454CA1112341513D00015660 /* ContentView.swift */; };
@@ -45,7 +44,6 @@
 		454CA10B2341513D00015660 /* OrderForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderForm.swift; sourceTree = "<group>"; };
 		454CA10C2341513D00015660 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		454CA10D2341513D00015660 /* FoodData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
-		454CA10E2341513D00015660 /* ContentViewTemp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewTemp.swift; sourceTree = "<group>"; };
 		454CA10F2341513D00015660 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		454CA1102341513D00015660 /* DetailRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRow.swift; sourceTree = "<group>"; };
 		454CA1112341513D00015660 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 				45D46C9223414DCE006AF595 /* AppDelegate.swift */,
 				45D46C9423414DCE006AF595 /* SceneDelegate.swift */,
 				454CA1112341513D00015660 /* ContentView.swift */,
-				454CA10E2341513D00015660 /* ContentViewTemp.swift */,
 				454CA1102341513D00015660 /* DetailRow.swift */,
 				454CA10C2341513D00015660 /* DetailView.swift */,
 				454CA10F2341513D00015660 /* Food.swift */,
@@ -289,7 +286,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				454CA1172341513D00015660 /* Food.swift in Sources */,
-				454CA1162341513D00015660 /* ContentViewTemp.swift in Sources */,
 				454CA1132341513D00015660 /* OrderForm.swift in Sources */,
 				454CA1142341513D00015660 /* DetailView.swift in Sources */,
 				45D46C9323414DCE006AF595 /* AppDelegate.swift in Sources */,
