@@ -16,13 +16,16 @@ struct ContentView: View {
     
     @FetchRequest(entity: ToDoItems.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \ToDoItems.createdAt, ascending: false)], predicate: NSPredicate(format: "taskDone = %d", false))
     
+    
     var fetchedItems: FetchedResults<ToDoItems>
+    
+    @State var newTaskTitle = ""
     
     var sampleTasks = [
         "Task One", "Task Two", "Task Three"
     ]
     
-    @State var newTaskTitle = ""
+    
     
     var body: some View {
         NavigationView {
