@@ -45,7 +45,7 @@ struct CategoryView: View {
                     .frame(width: 300, height: 150)
                     .clipped()
                     .cornerRadius(20.0)
-                Spacer()
+      
                 Text(categoryName)
                     .font(.custom("HelveticaNeue-Medium", size: 50))
                     .foregroundColor(.white)

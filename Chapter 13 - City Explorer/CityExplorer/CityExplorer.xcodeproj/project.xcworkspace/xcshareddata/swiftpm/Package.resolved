@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
+        "state": {
+          "branch": null,
+          "revision": "747c8db8d57b68d5e35275f10c92d55f982adbd4",
+          "version": "4.9.1"
+        }
+      },
+      {
+        "package": "AlamofireImage",
+        "repositoryURL": "https://github.com/Alamofire/AlamofireImage",
+        "state": {
+          "branch": null,
+          "revision": "c31e617c582102d4b51c714211071f2260e24fdd",
+          "version": "3.6.0"
+        }
+      },
+      {
+        "package": "QGrid",
+        "repositoryURL": "https://github.com/Q-Mobile/QGrid",
+        "state": {
+          "branch": null,
+          "revision": "40607aec336a8097c94bcadb81762592d89073ac",
+          "version": "0.1.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
