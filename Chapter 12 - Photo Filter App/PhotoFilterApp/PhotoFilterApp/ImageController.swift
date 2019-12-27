@@ -5,25 +5,17 @@
 
 import Foundation
 import SwiftUI
-import Combine
 
 class ImageController: ObservableObject {
     
-    let objectWillChange = PassthroughSubject<ImageController, Never>()
-    
-    var originalImage = UIImage(named: "testImage") {
+    @Published var originalImage = UIImage(named: "testImage") {
         didSet {
             displayedImage = originalImage
             thumbnailImage = originalImage?.compressed()
-            objectWillChange.send(self)
         }
     }
     
-    var displayedImage = UIImage(named: "testImage") {
-        didSet {
-            objectWillChange.send(self)
-        }
-    }
+    @Published var displayedImage = UIImage(named: "testImage")
     
     var thumbnailImage = UIImage(named: "testImage")?.compressed()
     

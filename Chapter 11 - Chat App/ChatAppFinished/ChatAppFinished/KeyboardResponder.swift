@@ -8,19 +8,12 @@
 
 import Foundation
 import SwiftUI
-import Combine
 
 class KeyboardResponder: ObservableObject {
     
     var _center: NotificationCenter
     
-    let objectWillChange = PassthroughSubject<KeyboardResponder,Never>()
-    
-    var currentHeight: CGFloat = 0 {
-        didSet {
-            objectWillChange.send(self)
-        }
-    }
+    @Published var currentHeight: CGFloat = 0 
 
     init(center: NotificationCenter = .default) {
         _center = center

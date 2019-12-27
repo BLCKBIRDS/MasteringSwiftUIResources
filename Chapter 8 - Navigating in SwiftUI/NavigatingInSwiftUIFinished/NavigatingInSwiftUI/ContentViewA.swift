@@ -15,7 +15,11 @@ struct ContentViewA : View {
     var body: some View {
         VStack {
             GrumpyDog()
-            Button(action: {self.viewRouter.currentPage = "page2"}) {
+            Button(action: {
+                withAnimation() {
+                    self.viewRouter.currentPage = "page2"
+                }
+            }) {
                 NextButtonContent()
             }
         }

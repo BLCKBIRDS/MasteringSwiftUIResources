@@ -15,7 +15,11 @@ struct ContentViewB : View {
     var body: some View {
         VStack {
             HappyDog()
-            Button(action: {self.viewRouter.currentPage = "page1"}) {
+            Button(action: {
+                withAnimation() {
+                    self.viewRouter.currentPage = "page1"
+                }
+            }) {
                 BackButtonContent()
             }
         }

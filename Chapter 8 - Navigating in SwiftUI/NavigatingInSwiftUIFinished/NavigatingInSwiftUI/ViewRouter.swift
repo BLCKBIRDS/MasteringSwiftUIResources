@@ -7,18 +7,10 @@
 //
 
 import Foundation
-import Combine
 import SwiftUI
 
 class ViewRouter: ObservableObject {
     
-    let objectWillChange = PassthroughSubject<ViewRouter,Never>()
+    @Published var currentPage: String = "page1"
     
-    var currentPage: String = "page1" {
-        didSet {
-            withAnimation() {
-                objectWillChange.send(self)
-            }
-        }
-    }
 }
