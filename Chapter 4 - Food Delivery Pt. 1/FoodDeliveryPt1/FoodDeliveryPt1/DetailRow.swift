@@ -18,7 +18,7 @@ struct DetailRow: View {
                 Text(food.title)
                     .font(.headline)
                     .padding(.top, 10)
-                Text("\(food.price) $")
+                Text("\(food.price, specifier: "%2.2f") $")
                     .font(.caption)
             }
             Spacer()
