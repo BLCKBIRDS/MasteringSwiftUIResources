@@ -21,7 +21,6 @@ struct DetailRow: View {
                 Text("\(food.price, specifier: "%2.2f") $")
                     .font(.caption)
             }
-            Spacer()
             Button(action: {print("Order received.")}) {
                 Text("ORDER")
                     .foregroundColor(.white)
