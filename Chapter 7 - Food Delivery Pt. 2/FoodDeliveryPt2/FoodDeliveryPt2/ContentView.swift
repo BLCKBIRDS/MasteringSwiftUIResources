@@ -2,20 +2,16 @@
 //  ContentView.swift
 //  FoodDeliveryListSwiftUITutorial
 //
-//  Created by Andreas Schultz on 09.08.19.
-//  Copyright © 2019 Andreas Schultz. All rights reserved.
+//  Created by BLCKBIRDS on 09.08.19.
+//  Copyright © 2019 BLCKBIRDS. All rights reserved.
 //
 
-
 import SwiftUI
-
-
 
 struct ContentView : View {
     var body: some View {
         NavigationView {
             List {
-                //change
                 NavigationLink(destination: DetailView(currentCategory: .burger)) {
                     CategoryView(imageName: "burger", categoryName: "BURGER")
                 }
