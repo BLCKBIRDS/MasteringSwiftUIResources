@@ -36,6 +36,7 @@ struct PhotoGrid: View {
 
                     })
                 } else {
+                    Spacer()
                     ZStack(alignment: .leading) {
                         RoundedRectangle(cornerRadius: 20)
                             .foregroundColor(.gray)
@@ -44,6 +45,7 @@ struct PhotoGrid: View {
                             .foregroundColor(.blue)
                             .frame(width: 320*CGFloat(self.downloadManager.percentLoaded), height: 12)
                     }
+                    Spacer()
                 }
             }
         }

@@ -34,37 +34,42 @@ class DownloadManager: ObservableObject {
     }
     
     func retrieveImageURLS(fromFlickrURL: String, handler: @escaping (_ status: Bool) -> ()) {
-        Alamofire.request(fromFlickrURL).responseJSON { (response) in
-            guard let json = response.result.value as? Dictionary<String, AnyObject> else {
-                print("Json could not be created.")
-                return
+        AF.request(fromFlickrURL).responseJSON { (response) in
+            switch response.result {
+            case let .success(value):
+                if let json = value as? Dictionary<String, AnyObject> {
+                    let motherPhotosDict = json["photos"] as! Dictionary<String, AnyObject>
+                    let photoDicts = motherPhotosDict["photo"] as! [Dictionary<String, AnyObject>]
+                    for photo in photoDicts {
+                        let photoURL = "https://farm\(photo["farm"]!).staticflickr.com/\(photo["server"]!)/\(photo["id"]!)_\(photo["secret"]!)_b.jpg"
+                        self.imageURLs.append(photoURL)
+                    }
+                    handler(true)
+                }
+            case let .failure(error):
+                print("Json could not be created.", error)
             }
-            let motherPhotosDict = json["photos"] as! Dictionary<String, AnyObject>
-            let photoDicts = motherPhotosDict["photo"] as! [Dictionary<String, AnyObject>]
-            for photo in photoDicts {
-                let photoURL = "https://farm\(photo["farm"]!).staticflickr.com/\(photo["server"]!)/\(photo["id"]!)_\(photo["secret"]!)_b.jpg"
-                self.imageURLs.append(photoURL)
-            }
-            handler(true)
         }
     }
     
     func retrieveImages(handler: @escaping(_ status: Bool) -> ()) {
+        
         guard !imageURLs.isEmpty else { return handler(true) }
         
         for url in imageURLs {
-            Alamofire.request(url).responseImage { (response) in
-                guard let image = response.result.value else {
-                    print("Image could not be fetched from \(url).")
-                    return
-                }
-                self.imageCells.append(ImageCell(image: Image(uiImage: image)))
-                withAnimation() {
-                    self.percentLoaded = Double(self.imageCells.count)/Double(self.imageURLs.count)
-                }
-                print("\(self.imageCells.count)/\(self.imageURLs.count) images downloaded.")
-                if self.imageCells.count == self.imageURLs.count {
-                    handler(true)
+            AF.request(url).responseImage { (response) in
+                switch response.result {
+                case let .success(retrievedImage):
+                    self.imageCells.append(ImageCell(image: Image(uiImage: retrievedImage)))
+                    withAnimation {
+                        self.percentLoaded = Double(self.imageCells.count)/Double(self.imageURLs.count)
+                    }
+                    print("\(self.imageCells.count)/\(self.imageURLs.count) images downloaded.")
+                    if self.imageCells.count == self.imageURLs.count {
+                        handler(true)
+                    }
+                case let .failure(error):
+                    print("Image could not be fetched from \(url).", error)
                 }
             }
         }

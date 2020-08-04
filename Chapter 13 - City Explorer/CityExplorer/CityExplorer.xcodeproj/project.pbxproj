@@ -14,6 +14,7 @@
 		45A54A3E23B57355001459FE /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A54A3A23B57355001459FE /* APIHelper.swift */; };
 		45A54A3F23B57355001459FE /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A54A3B23B57355001459FE /* ImageCell.swift */; };
 		45A54A4023B57355001459FE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A54A3C23B57355001459FE /* ContentView.swift */; };
+		45D791EA24D9E6000005FD48 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 45D791E924D9E6000005FD48 /* AlamofireImage */; };
 		45EE411723B50D2800D52295 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EE411623B50D2800D52295 /* AppDelegate.swift */; };
 		45EE411923B50D2800D52295 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EE411823B50D2800D52295 /* SceneDelegate.swift */; };
 		45EE411D23B50D2E00D52295 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45EE411C23B50D2E00D52295 /* Assets.xcassets */; };
@@ -21,7 +22,6 @@
 		45EE412323B50D2E00D52295 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45EE412123B50D2E00D52295 /* LaunchScreen.storyboard */; };
 		45EE412E23B50D2F00D52295 /* CityExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EE412D23B50D2F00D52295 /* CityExplorerTests.swift */; };
 		45EE413923B50D2F00D52295 /* CityExplorerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45EE413823B50D2F00D52295 /* CityExplorerUITests.swift */; };
-		45EE415623B50E3000D52295 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 45EE415523B50E3000D52295 /* AlamofireImage */; };
 		45EE415923B50E9600D52295 /* QGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 45EE415823B50E9600D52295 /* QGrid */; };
 /* End PBXBuildFile section */
 
@@ -71,7 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45EE415923B50E9600D52295 /* QGrid in Frameworks */,
-				45EE415623B50E3000D52295 /* AlamofireImage in Frameworks */,
+				45D791EA24D9E6000005FD48 /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,8 +207,8 @@
 			);
 			name = CityExplorer;
 			packageProductDependencies = (
-				45EE415523B50E3000D52295 /* AlamofireImage */,
 				45EE415823B50E9600D52295 /* QGrid */,
+				45D791E924D9E6000005FD48 /* AlamofireImage */,
 			);
 			productName = CityExplorer;
 			productReference = 45EE411323B50D2800D52295 /* CityExplorer.app */;
@@ -283,8 +283,8 @@
 			);
 			mainGroup = 45EE410A23B50D2800D52295;
 			packageReferences = (
-				45EE415423B50E3000D52295 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 				45EE415723B50E9600D52295 /* XCRemoteSwiftPackageReference "QGrid" */,
+				45D791E824D9E6000005FD48 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = 45EE411423B50D2800D52295 /* Products */;
 			projectDirPath = "";
@@ -664,12 +664,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		45EE415423B50E3000D52295 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+		45D791E824D9E6000005FD48 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 3.6.0;
+				minimumVersion = 4.1.0;
 			};
 		};
 		45EE415723B50E9600D52295 /* XCRemoteSwiftPackageReference "QGrid" */ = {
@@ -683,9 +683,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		45EE415523B50E3000D52295 /* AlamofireImage */ = {
+		45D791E924D9E6000005FD48 /* AlamofireImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 45EE415423B50E3000D52295 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			package = 45D791E824D9E6000005FD48 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
 			productName = AlamofireImage;
 		};
 		45EE415823B50E9600D52295 /* QGrid */ = {
